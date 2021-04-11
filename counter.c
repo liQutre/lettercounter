@@ -9,6 +9,7 @@
 #include <string.h>
 #include <ctype.h>
 
+
 #define COUNT_SIZE 26
 #define BUFFER_SIZE 1024
 
@@ -41,7 +42,6 @@ int main()
     curchar = toupper(buffer[i]);
     if (curchar >= 65 && curchar <= 90) count[curchar - 65]++;
     else other++;
-
   }
 
   // Create the letter analysis table
@@ -53,6 +53,7 @@ int main()
                                count[i],
                                (((float) count[i]) / strlen(buffer)) * 100);
   }
+
 
   // Output the number of other characters
   printf("\nNumber of characters other than letters: %d\n", other);
@@ -71,7 +72,6 @@ int main()
 
   return 0;
 }
-
 
 // Returns the position in array count of the associated letter that 
 // occurred the maximum number of times
@@ -104,3 +104,6 @@ int min(int count[])
   }  
   return min_pos;
 }
+
+
+
